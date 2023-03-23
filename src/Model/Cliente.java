@@ -4,8 +4,6 @@
  */
 package Model;
 
-import java.util.Date;
-
 /**
  *
  * @author Renato Felix
@@ -43,4 +41,8 @@ public class Cliente extends Pessoa {
         this.cep = cep;
     }
     
+    @Override
+    public String toString(){
+        return getNome();
+    }
 }
