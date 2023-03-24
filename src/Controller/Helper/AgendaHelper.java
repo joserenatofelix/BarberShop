@@ -6,6 +6,7 @@ package Controller.Helper;
 
 import Model.Agendamento;
 import Model.Cliente;
+import static Model.DAO.Banco.servico;
 import Model.Servico;
 import View.Agenda;
 import java.util.ArrayList;
@@ -67,6 +68,13 @@ public class AgendaHelper {
             
         }
         
+    }
+
+    public Servico obterServico() {
+      return (Servico)view.getJComboBoxServico().getSelectedItem();
+    }
+    public void setarValor(float valor){
+        view.getTextValor().setText(valor+"");
     }
     
 }
