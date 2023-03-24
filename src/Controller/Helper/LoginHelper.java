@@ -11,7 +11,7 @@ import View.Login;
  *
  * @author Renato Felix
  */
-public class LoginHelper {
+public class LoginHelper implements IHelper{
     
     private final Login view;
 
