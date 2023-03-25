@@ -9,7 +9,7 @@ package Model;
  * @author Renato Felix
  */
 public class Cliente extends Pessoa {
-    
+
     private String endereco;
     private String cep;
 
@@ -24,7 +24,7 @@ public class Cliente extends Pessoa {
         this.endereco = endereco;
         this.cep = cep;
     }
-    
+
     public String getEndereco() {
         return endereco;
     }
@@ -40,9 +40,9 @@ public class Cliente extends Pessoa {
     public void setCep(String cep) {
         this.cep = cep;
     }
-    
+
     @Override
-    public String toString(){
+    public String toString() {
         return getNome();
     }
 }

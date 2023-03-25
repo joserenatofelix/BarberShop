@@ -4,14 +4,12 @@
  */
 package Model;
 
-
-
 /**
  *
  * @author Renato Felix
  */
 public class Usuario extends Pessoa {
-    
+
     protected String senha;
     protected String nivelAcesso;
 
@@ -41,9 +39,5 @@ public class Usuario extends Pessoa {
     public void setNivelAcesso(String nivelAcesso) {
         this.nivelAcesso = nivelAcesso;
     }
-    
-    
-    
-    
-}
 
+}

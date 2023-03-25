@@ -15,6 +15,7 @@ import java.util.logging.Logger;
  * @author Renato Felix
  */
 abstract public class Pessoa {
+
     protected int id;
     protected String nome;
     protected char sexo;
@@ -32,7 +33,7 @@ abstract public class Pessoa {
         this.id = id;
         this.nome = nome;
         this.sexo = sexo;
-         try {
+        try {
             this.dataNascimento = new SimpleDateFormat("DD/MM/YYYY").parse(dataNascimento);
         } catch (ParseException ex) {
             Logger.getLogger(Pessoa.class.getName()).log(Level.SEVERE, null, ex);
@@ -97,5 +98,5 @@ abstract public class Pessoa {
     public void setRg(String rg) {
         this.rg = rg;
     }
-    
+
 }
