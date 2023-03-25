@@ -15,7 +15,7 @@ import java.util.logging.Logger;
  * @author Renato Felix
  */
 public class Agendamento {
-    
+
     private int id;
     private Cliente cliente;
     private Servico servico;
@@ -24,15 +24,20 @@ public class Agendamento {
     private String observacao;
 
     public Agendamento(int id, Cliente cliente, Servico servico, float valor, String data) {
-            this.id = id;
-            this.cliente = cliente;
-            this.servico = servico;
-            this.valor = valor;
-         try {
+        this.id = id;
+        this.cliente = cliente;
+        this.servico = servico;
+        this.valor = valor;
+        try {
             this.data = new SimpleDateFormat("DD/MM/YYYY HH:mm").parse(data);
         } catch (ParseException ex) {
             Logger.getLogger(Agendamento.class.getName()).log(Level.SEVERE, null, ex);
         }
+    }
+
+    public Agendamento(int id, Cliente cliente, Servico servico, float valor, String data, String observacao) {
+        this(id, cliente, servico, valor, data);
+        this.observacao = observacao;
     }
 
     public int getId() {
@@ -70,12 +75,12 @@ public class Agendamento {
     public Date getData() {
         return data;
     }
-    
-    public String getDataFormatada(){
+
+    public String getDataFormatada() {
         return new SimpleDateFormat("dd/MM/yyyy").format(data);
     }
-    
-    public String getHoraFormatada(){
+
+    public String getHoraFormatada() {
         return new SimpleDateFormat("HH:mm").format(data);
     }
 
@@ -90,7 +95,5 @@ public class Agendamento {
     public void setObservação(String observacao) {
         this.observacao = observacao;
     }
-    
-    
-    
+
 }

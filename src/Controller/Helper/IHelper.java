@@ -9,9 +9,9 @@ package Controller.Helper;
  * @author Renato Felix
  */
 public interface IHelper {
-    
+
     public abstract Object ObterModelo();
-    
+
     public abstract void limparTela();
-    
+
 }
