@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package Model;
+package Models;
 
 /**
  *
@@ -13,8 +13,9 @@ public class Cliente extends Pessoa {
     private String endereco;
     private String cep;
 
-    public Cliente(int id, String nome, char sexo, String dataNascimento, String telefone, String email, String rg, String endereco, String cep) {
-        super(id, nome, sexo, dataNascimento, telefone, email, rg);
+    public Cliente(int id, String nome, char sexo, String dataNascimento, String telefone, String email, String cpf,
+            String endereco, String cep) {
+        super(id, nome, sexo, dataNascimento, telefone, email, cpf);
         this.endereco = endereco;
         this.cep = cep;
     }
@@ -45,4 +46,5 @@ public class Cliente extends Pessoa {
     public String toString() {
         return getNome();
     }
+
 }
